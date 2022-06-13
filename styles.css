@@ -1,0 +1,79 @@
+body {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: burlywood;
+}
+#user {
+  width: 80%;
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+#user > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#user > div img {
+  border-radius: 50%;
+  min-height: 200px;
+}
+#user > div h1 {
+  margin-bottom: 0;
+  align-self: stretch;
+  position: relative;
+}
+#user > div h1 span {
+  position: absolute;
+  right: 0;
+  height: inherit;
+  width: 100%;
+  text-align: center;
+  transform: translateX(100%);
+}
+#user > div h1, #user > div h1 span {
+  transition: 0.3s ease;
+}
+#user > div ul {
+  align-self: stretch;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+#user > div ul li {
+  position: relative;
+  width: 18%;
+  margin: 0 1%;
+  word-wrap: break-word;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+#user > div ul li p {
+  transform: translateY(-300%);
+  transition: 0.23s ease-in-out;
+}
+#user > div ul li:hover::after {
+  transform: translateX(50%) translateY(100%);
+}
+#user > div ul li:hover p {
+  transform: translateY(0%);
+}
+#user > div ul li::after {
+  content: "";
+  background-color: burlywood;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
+  transition: 0.2s ease;
+}
